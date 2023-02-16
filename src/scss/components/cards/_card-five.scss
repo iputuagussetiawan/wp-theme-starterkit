@@ -1,0 +1,83 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-five{
+    @include imageRatio(516,210,false,cover,'image');
+    background: $white;
+    box-shadow: 0px 27px 72px rgba(48, 52, 77, 0.07), 0px 6.0308px 16.0821px rgba(48, 52, 77, 0.0417275), 0px 1.79553px 4.78807px rgba(48, 52, 77, 0.0282725);
+    border-radius: 12px;
+
+    &:hover  &__image{
+        transform: scale(1.06);
+    }
+
+    &:hover  &__title,
+    &:hover  &__link,
+    &:hover  &__icon{
+       color: $secondary-80;
+    }
+
+    &:hover  &__icon{
+        left: 10px;
+     }
+
+    &__image-container{
+        overflow: hidden;
+        border-radius: 12px 12px 0px 0px;
+    }
+    &__image{
+        transition: 1s ease;
+    }
+    &__info-container{
+        padding: 32px;
+    }
+    &__date{
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-70;
+        margin-bottom: 12px;
+    }
+
+    &__title{
+        @include elypsis($font-size: 24, $lines-to-show: 2, $line-height : 1.3);
+        font-weight: 700;
+        color: $neutral-100;
+        transition: 0.4s ease;
+    }
+
+    &__link{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $primary-80;
+        vertical-align: middle;
+        transition: 0.4s ease;
+    }
+
+    &__icon{
+        position: relative;
+        left: 0px;
+        color: $primary-80;
+        vertical-align: middle;
+        transition: 0.4s ease;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__info-container{
+            padding: 24px;
+        }
+        &__title{
+            @include elypsis($font-size: 18, $lines-to-show: 2, $line-height : 1.3);
+        }
+        &__link{
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__info-container{
+            padding: 20px;
+        }
+        border-radius: 8px;
+    }
+}

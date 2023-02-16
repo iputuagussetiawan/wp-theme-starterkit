@@ -1,0 +1,79 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-one.scss';
+
+.client-says{
+    margin: 0px auto;
+	max-width: 1920px;
+    background-color: $secondary-30;
+    .swiper-slide{
+        height: auto !important;
+    }
+    // .swiper-wrapper {
+    //     -webkit-transition-timing-function:linear!important; 
+    //     -o-transition-timing-function:linear!important;
+    //     transition-timing-function:linear!important; 
+    // }
+    .swiper-button-next, 
+    .swiper-button-prev {
+        width: 48px;
+        height: 48px;
+        background-color: $secondary-80;
+        border-radius: 12px;
+        transition: 0.4s ease;
+        &:hover{
+            background-color: $secondary-hover;
+        }
+        &::after{
+            display: none;
+        }
+    }
+    .swiper-button-prev{
+        left: -72px;
+    }
+    .swiper-button-next{
+        right: -72px;
+    }
+  
+    .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: -70px;
+        left: 0;
+        width: 100%;
+    }
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        background:  $neutral-40;
+        opacity: 1;
+        transition: 0.4s ease;
+       
+    }
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: $secondary-80; ;
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        .swiper-button-prev{
+            left: -50px;
+        }
+        .swiper-button-next{
+            right: -50px;
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        .swiper-button-next, 
+        .swiper-button-prev {
+          display: none;
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+        }
+        .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: -42px;
+        }
+    }
+}

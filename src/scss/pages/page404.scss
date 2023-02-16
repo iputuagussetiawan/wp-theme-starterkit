@@ -1,0 +1,18 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+
+.page404{
+    &__title{
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 94px;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__title{
+            font-size: 48px;
+            line-height: 60px;
+        }
+    }
+}

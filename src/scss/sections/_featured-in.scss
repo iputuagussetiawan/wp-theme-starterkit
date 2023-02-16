@@ -1,0 +1,94 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+
+.featured-in{
+    .swiper-slide.swiper-slide-active{
+        transform: scale(1);
+    }
+
+    .swiper-slide.swiper-slide-active  &__slide-image{
+        opacity: 1;
+    }
+    &__grid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__image-container{
+        text-align: center;
+        width: 20%;
+        margin-bottom: 35px;
+        background-color: $white;
+    }
+
+    &__image-container.active &__image{
+        opacity: 1;
+    }
+
+    &__image {
+        max-width: 200px;
+        height: auto;
+        transition: 0.4s ease;
+        opacity: 0.3;
+    }
+
+    &__swiper{
+        display: none;
+    }
+   
+
+    &__slide-item{
+        display: inline-block;
+        text-align: center;
+    }
+
+    &__swiper-wrapper{
+        align-items: center;
+    }
+
+    &__slide{
+        text-align: center;
+        transform: scale(0.8);
+        transition:transform 1000ms ease;
+       
+    }
+
+    &__slide-image{
+        width: 100%;
+        height: auto;
+        transition: 0.4s ease;
+        opacity: 0.3;
+    }
+
+    // @media only screen and (max-width:1440px) {
+      
+    // }
+
+    @media only screen and (max-width:1199.98px) {
+        &__image-container{
+            width: 33.33%;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__image-container{
+            width: 50%;
+            margin-bottom: 48px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__swiper{
+            display: block;
+        }
+        &__grid{
+            display: none;
+        }
+        &__image-container{
+            width: 100%;
+            margin-bottom: 48px;
+        }
+    }
+}

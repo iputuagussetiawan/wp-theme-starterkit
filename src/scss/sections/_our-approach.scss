@@ -1,0 +1,132 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-approach.scss' as *;
+
+.our-approach{
+    margin: 0px auto;
+	max-width: 1920px;
+    overflow: hidden;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, #30344D 48.94%, rgba(48, 52, 77, 0) 182.6%);
+        opacity: 1;
+        z-index: 2;
+    }
+
+    &__bg{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        z-index: 1;
+        object-fit: cover;
+    }
+
+    &__grid{
+        position: relative;
+        color: $white;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        z-index: 3;
+    }
+
+    &__info-container{
+        grid-column: 2/6;
+    }
+
+    &__values-container{
+        grid-column: 7/13;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px 40px;
+    }
+
+    &__title{
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: capitalize;
+    }
+
+    &__description{
+        font-size: 18px;
+        font-weight:300;
+        line-height: 28px;
+        color: $white; 
+    }
+
+    @media only screen and (max-width: 1600px) {
+        &__info-container{
+            grid-column: 2/7;
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__title{
+            font-size: 28px;
+            line-height: 40px;
+        }
+        &__description{
+            font-size: 14px;
+            line-height: 24px;
+        }
+    
+        &__values-container{
+            grid-column: 7/13;
+            gap: 40px 30px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__values-container{
+            gap: 56px 20px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            gap: 40px 8px;
+        }
+        &__info-container{
+            grid-column: 1/13;
+            text-align: center;
+        }
+    
+        &__values-container{
+            grid-column: 1/13;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &::before{
+            background: linear-gradient(180deg, #30344D 1.8%, #30344D 72.38%, rgba(48, 52, 77, 0) 146.87%);
+        }
+        &__title{
+            font-size: 32px;
+            line-height: 42px;
+        }
+        &__description{
+            font-size: 16px;
+            line-height: 24px;
+        }
+       
+    }
+
+    @media only screen and (max-width: 380px) {
+        &__values-container{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

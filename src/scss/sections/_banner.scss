@@ -1,0 +1,207 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+
+.banner{
+	@include imageRatio(957,685);
+	margin: 0px auto;
+	max-width: 1920px;
+	background-color: $primary-80;
+	&__inner{
+		margin-left: 8.5%;
+		padding-left: 12px;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		align-items: center;
+		gap: 24px;
+		overflow-x: hidden;
+	}
+
+	&__info-container{
+		padding: 70px 32px 70px 0px;
+		grid-column: 1/6;
+		grid-row: 1;
+		z-index: 2;
+	}
+
+	&__btn-wrapper{
+		display: grid;
+		grid-template-columns:repeat(2, 1fr);
+		gap: 30px;
+	}
+
+	&__image-container{
+		height: 100%;
+		grid-column: 7/13;
+		grid-row: 1;
+		z-index: 1;
+	}
+
+	&__title{
+		margin-bottom: 8px;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 60px;
+		text-transform: capitalize;
+		color: $white;
+	}
+	&__description{
+		margin-bottom: 32px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 28px;
+		color: $neutral-30;
+	}
+
+	
+	@media only screen and (max-width: 1600px) {
+		&__inner{
+			margin-left: 3.5%;
+		}
+		&__info-container{
+			padding: 70px 0px;
+			grid-column: 1/6;
+		}
+		&__image-container {
+			grid-column: 7/13;
+		}
+		&__title{
+			font-size: 35px;
+			line-height: 47px;
+		}
+		&__description{
+			font-size: 16px;
+			line-height: 26px;
+		}
+	}
+
+	@media only screen and (max-width: 1440px) {
+		&__inner{
+			gap: 0px;
+		}
+		&__info-container{
+			padding: 50px 0px;
+			grid-column: 1/6;
+		}
+		&__title {
+			font-size: 41px;
+    		line-height: 47px;
+		}
+		&__description{
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+
+	@media only screen and (max-width: 1399.98px) {
+		&__inner{
+			gap: 0px;
+		}
+		&__info-container{
+			padding: 50px 0px;
+			grid-column: 1/6;
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 40px;
+		}
+		&__description{
+			font-size: 12px;
+			line-height: 20px;
+		}
+	}
+
+	@media only screen and (max-width: 1199.98px) {
+		&__info-container{
+			grid-column: 1/6;
+		}
+		&__title{
+			font-size: 27px;
+			line-height: 40px;
+		}
+		&__description{
+			font-size: 14px;
+			line-height: 22px;
+		}
+		&__btn-wrapper{
+			grid-template-columns: 2fr 1fr;
+			gap: 24px;
+		}
+	}
+	@media only screen and (max-width: 991.98px) {
+		.swiper-slide{
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				top:0px;
+				right: 0px;
+				bottom: 0px;
+				right: 0px;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(90deg, #30344D 54.99%, rgba(48, 52, 77, 0) 98.73%);
+				z-index: 2;
+			}
+		}
+		&__info-container {
+			position: relative;
+			grid-column: 1/8;
+			padding: 70px 0px;
+			z-index: 3;
+			
+		}
+		&__image-container {
+			grid-column: 3/13;
+		}
+
+		&__title {
+			font-size: 24px;
+			line-height: 32px;
+		}
+		&__btn-wrapper{
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+	}
+
+	@media only screen and (max-width: 767.98px) {
+		&__info-container {
+			padding-top: 70px;
+			padding-bottom: 70px;
+			position: relative;
+			grid-column: 1/12;
+			grid-row: 1;
+			z-index: 2;
+		}
+		&__image-container {
+			display: none;
+			height: 100%;
+			position: relative;
+			grid-column: 1/13;
+			grid-row: 1;
+			z-index: 1;
+		}
+		&__btn-wrapper{
+			display: grid;
+			gap: 24px;
+		}
+	}
+
+	@media only screen and (max-width: 575.98px) {
+		&__inner{
+			gap: 0px;
+			margin: 0px;
+			padding: 0px;
+		}
+		&__info-container{
+			grid-column: 1/13;
+			padding: 70px 24px;
+		}
+		&__btn-wrapper{
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+	}
+}

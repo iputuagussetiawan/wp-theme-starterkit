@@ -1,0 +1,32 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/_card-five.scss';
+
+.casestudy-check{
+    margin: 0px auto;
+	max-width: 1920px;
+    padding-bottom: 160px;
+    background-color:$secondary-30;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 30px;
+    }
+    &__inner{
+        grid-column: 2/12;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 34px;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            gap: 0px;
+        }
+        &__inner{
+            grid-column: 1/13;
+            grid-template-columns: repeat(1,1fr);
+            gap: 32px 0px;
+        }
+    }
+}

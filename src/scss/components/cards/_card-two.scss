@@ -1,0 +1,93 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-two{
+    @include imageRatio(56,56,true,contain,'icon');
+    height: 100%;
+    background-color: $white;
+    padding: 32px;
+    border-radius: 8px;
+
+    &__title{
+        margin-bottom: 0px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        text-transform: capitalize;
+        color: $neutral-90;
+    }
+    &__subtitle{
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: $neutral-100;
+    }
+    &__description{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+    }
+
+    @media only screen and (max-width: 1600px) {
+        @include imageRatio(50,50,true,contain,'icon');
+        padding: 24px;
+        &__title{
+            font-size: 27px;
+            line-height: 38px;
+        }
+        &__description{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        @include imageRatio(42,42,true,contain,'icon');
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        &__subtitle{
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &__description{
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__body{
+            font-size: 13px;
+            line-height: 1.7;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+       
+        &:nth-child(3){
+            grid-column: span 2;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &:nth-child(3){
+            grid-column: unset
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__title{
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &__subtitle{
+            font-size: 16px;
+            line-height: 26px;
+        }
+        &__description{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

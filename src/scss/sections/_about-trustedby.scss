@@ -1,0 +1,67 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+
+.about-trustedby{
+    margin: 0px auto;
+	max-width: 1920px;
+    &__grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__image-container{
+        margin-bottom: 60px;
+        flex: 0 0 14.28%;
+        justify-content: center;
+        min-height: 70px;
+        text-align: center;
+        transition: 0.4s ease;
+        opacity: 1;
+        &.out{
+            opacity: 0;
+        }
+    }
+
+    &__image{
+        width: auto;
+        height: auto;
+        max-width: 100px;
+        object-fit: contain;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__image-container{
+            flex: 0 0 12.5%;
+        }
+    }
+    @media only screen and (max-width: 1199.98px) {
+        &__image-container{
+            flex: 0 0 16.6%;
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__image-container{
+            flex: 0 0 20%;
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__image-container{
+            flex: 0 0 25%;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__image{
+           width: 64%;
+        }
+    }
+   
+    @media only screen and (max-width: 380px) {
+        &__image-container{
+            flex: 0 0 50%;
+        }
+    }
+}

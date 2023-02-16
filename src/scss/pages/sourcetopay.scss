@@ -1,0 +1,359 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+@use "../sections/_about-trustedby.scss" as *;
+@use "../sections/_whyus.scss" as *;
+@use "../sections/_casestudy-check.scss" as *;
+@use '../components/cards/_card-three.scss' as *;
+@use '../components/cards/_card-four.scss' as *;
+@use '../components/cards/_card-eight.scss' as *;
+.whyus {
+    padding-top: 0px;
+}
+
+.sourcetopay-banner{
+    position: relative;
+    .section-title__description{
+        font-weight:500;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr); 
+        gap: 24px;
+    }
+
+    &__title-wrapper{
+        grid-column: 3/11;
+        grid-row: 1;
+    }
+    &__YT-wrapper{
+        position: relative;
+        display: grid;
+        grid-template-columns:repeat(10,1fr);
+        grid-column: 2/12;
+        grid-row: 2;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 40%;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            background: $primary-30;
+            border-radius: 24px;
+        }
+    }
+
+    &__YT-container{
+        grid-column: 2/10;
+        overflow: hidden;
+        border-radius: 24px 24px 0px 0px;
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__title-wrapper{
+            grid-column: 1/-1;
+            grid-row: 1;
+        }
+        &__grid{
+            gap: 0px;
+        }
+        &__description{
+            margin-top: 32px;
+            grid-column: 1/13;
+            padding: 0px;
+        }
+        &__YT-container{
+            border-radius: 7px 7px 0px 0px;
+        }
+
+        &__YT-wrapper{
+            grid-column: 1/13;
+            &::before{
+                border-radius: 7px;
+            }
+        }
+    }
+}
+
+.sourcetopay-welcome{
+    @include imageRatio(784,479,true);
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    &__image-container{
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    &__info-container{
+        padding-left: 80px;
+    }
+
+    &__title{
+        margin-bottom: 16px;
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $neutral-100;
+    }
+    &__content{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+
+        p{
+            &:last-child{
+                margin: 0px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__content{
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &__info-container{
+            padding-left: 50px;
+        }
+    }
+
+
+    @media only screen and (max-width: 1199.98px) {
+        @include imageRatio(784,479,true);
+       
+        &__grid{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            justify-content: center;
+        }
+        &__info-container{
+            padding-left: 0px;
+            order: 1;
+        }
+        &__image-container{
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        
+        &__title{
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &__content{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+.sourcetopay-ensure{
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 24px;
+    }
+    &__grid{
+        grid-column: 2/12;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 40px 33px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__grid{
+            gap: 24px 24px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            grid-column: 1/13;
+        }
+    }
+
+   
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
+
+.sourcetopay-usefulcontent{
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 24px;
+    }
+    &__grid{
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 31px 31px;
+    }
+    @media only screen and (max-width: 1440px) {
+        &__grid{
+            gap: 24px 24px;
+        }
+    }
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            grid-column: 1/13;
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
+
+.sourcetopay-keyconcept{
+    @include imageRatio(785,690);
+    margin: 0px auto;
+    max-width: 1920px;
+    background-color: $secondary-30;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__info-container{
+        grid-column: 1/6;
+    }
+
+    &__image-container{
+        grid-column: 7/13;
+    }
+
+    &__content{
+        h2,h3,h4{
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            color: $neutral-100; 
+        }
+        p{
+            margin-bottom: 32px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: $neutral-90;
+        }
+        ul{
+            list-style: none;
+            padding: 0px;
+
+            li{
+                position: relative;
+                margin-bottom: 24px;
+                padding-left: 32px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                color: $neutral-90;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                    width: 16px;
+                    height: 16px;
+                    background-color: $secondary-80;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+       
+    }
+
+
+    @media only screen and (max-width:1440px) {
+        &__content{
+            h2,h3,h4{
+                margin-bottom: 14px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+            p{
+                margin-bottom: 24px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+            ul{
+                li{
+                    margin-bottom: 22px;
+                    padding-left: 32px;
+                    font-size: 14px;
+                    line-height: 22px;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                    &::before{
+                        top: 6px;
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            grid-template-columns: 1fr;
+        }
+        &__info-container{
+            grid-column: auto;
+        }
+    
+        &__image-container{
+            margin-top: 40px;
+            grid-column:auto;
+        }
+    }
+
+    @media only screen and (max-width:767.98px) {
+        &__content{
+            h2,h3,h4{
+                font-size: 20px;
+                line-height: 28px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+            }
+            li{
+                font-size: 16px;
+                line-height: 24px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

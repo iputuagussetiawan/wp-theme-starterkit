@@ -1,0 +1,123 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-one{
+    @include imageRatio(80,80,true, contain,'photo');
+    height: 100%;
+    padding: 32px;
+    border-radius: 12px;
+    background-color: $white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2.5fr 1fr;
+    row-gap: 16px;
+
+    &__user-container{
+        display: flex;
+        align-items: center;
+    }
+    &__info-container{
+        padding-left: 16px;
+    }
+    &__logo-container{
+        text-align: right;
+    }
+    &__logo{
+        max-width: 170px;
+        height: auto;
+    }
+  
+    &__name{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $neutral-90;
+    }
+    &__position{
+        margin: 0px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $neutral-80;
+    }
+    &__body{
+        grid-column: span 2;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        @include imageRatio(70,70,true, contain,'photo');
+        padding: 20px;
+        &__logo{
+            max-width: 160px;
+        }
+        &__name{
+            font-size: 22px;
+            line-height: 22px;
+        }
+        &__position{
+            font-size: 14px;
+        }
+        &__body{
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    @media only screen and (max-width: 1399.98px) {
+        @include imageRatio(70,70,true, contain,'photo');
+        padding: 18px;
+        &__logo{
+            max-width: 150px;
+        }
+        &__name{
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__position{
+            font-size: 13px;
+        }
+        &__body{
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+    @media only screen and (max-width: 1199.98px) {
+        &__position{
+            font-size: 12px;
+        }
+        &__logo{
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__user-container{
+            grid-column: span 2 ;
+        }
+        &__logo-container{
+            order: 3;
+            grid-column: span 2 ;
+        }
+        &__logo{
+            max-width: 100px;
+        }
+        &__name{
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &__position{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__body{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

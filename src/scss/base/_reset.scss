@@ -1,0 +1,50 @@
+@use "../config/variable" as *;
+//////// STR RESET //////////////
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	font-family:$primary-font;
+	color: $neutral-90;
+	transition: 0.4s ease;
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	cursor: pointer;
+	background: $primary;
+}
+
+::-moz-selection {
+	background-color: $primary;
+	color: #ffffff;
+}
+
+::selection {
+	background-color: $primary;
+	color: #ffffff;
+}
+
+a {
+	color: $secondary-80;
+	transition: 0.4s ease;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: $primary;
+	}
+}
+/*-----------------------------------------
+////////////////// END RESET //////////////
+-----------------------------------------*/

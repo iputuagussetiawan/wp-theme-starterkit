@@ -1,0 +1,76 @@
+@use "../config/variable" as *;
+.breadcrumb-area{
+    position: relative;
+    margin-top: -72px;
+    overflow: hidden;
+}
+.breadcrumb-wrapper{
+    position: relative;
+    overflow-x: scroll;
+    top: 10px;
+   
+}
+.breadcrumb{
+    margin-bottom: 32px;
+    min-width: 1200px;
+    .breadcrumb-item{
+        color: $neutral-100;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        &::before{
+            color: $secondary-80;
+        }
+        a{
+            color: $neutral-70;
+            transition: 0.4s ease;
+            &:hover{
+                color: $secondary-80;
+            }
+        }
+    }
+    .breadcrumb-item + .breadcrumb-item {
+        padding-left:10px
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: '';
+        position: relative;
+        top: 5px;
+        padding-right: 27px;
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"%3E%3Cpath fill="none" stroke="%230fd7bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m184 112l144 144l-144 144"%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 18px;
+        height: 18px;
+    
+    }
+
+    &.black{
+        .breadcrumb-item{
+            color:#29292A;
+            &.active{
+                color: #BDBDBD;;
+            }
+            &::before{
+                color:#BDBDBD;;
+            }
+            a{
+                color: #29292A;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        .breadcrumb-item{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .breadcrumb-item + .breadcrumb-item::before {
+            top: 0px;
+        }
+    }
+}

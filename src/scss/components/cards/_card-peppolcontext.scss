@@ -1,0 +1,39 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-peppolcontext{
+    @include imageRatio(641,485,true,contain);
+    background: #F5F5F5;
+    padding: 64px;
+    border-radius: 6px;
+    text-align: center;
+
+
+    &__title{
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        padding: 42px;
+        &__title{
+            font-size: 24px;
+            line-height: 37px;
+        }
+    }
+    @media only screen and (max-width: 1440px) {
+        padding: 32px;
+    }
+    @media only screen and (max-width: 767.98px) {
+        @include imageRatio(366,456,true,contain);
+        background:transparent;
+        padding: 0px;
+        &__title{
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+}

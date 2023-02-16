@@ -1,0 +1,27 @@
+/*-----------------------------------------
+/////////////// STR ANIMATIONS ////////////
+-----------------------------------------*/
+@keyframes beforeShape3 {
+	0% {
+		transform: translate(50px, 50px);
+	}
+
+	100% {
+		transform: translate(0px, -50px);
+	}
+}
+
+@keyframes pulse-border {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+/*-----------------------------------------
+/////////////// END ANIMATIONS ////////////
+-----------------------------------------*/

@@ -1,0 +1,82 @@
+@use "_custom.scss";
+@use "base/_reset.scss";
+@use "base/_animations.scss";
+@use "base/_typography.scss";
+@use "layout/_header.scss";
+@use "layout/_page-header.scss";
+@use "layout/_main.scss";
+@use "layout/_footer.scss";
+@use "layout/_section.scss";
+@use "layout/_form.scss";
+@use "components/_breadcrumb.scss";
+@use "components/_buttons.scss";
+@use "components/_social-icon.scss";
+@use "components/_burgermenu.scss";
+@use "components/_pagination.scss";
+@use "components/_loader.scss";
+
+
+@media (min-width: 576px) {
+
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 93%;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 83%;
+    }
+}
+
+@media (min-width: 2560px) {
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1600px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+.offcanvas-backdrop {
+    z-index: 18;
+}
+
+.lazyloaded {
+    transition: all 400ms !important;
+}
+
+.grecaptcha-badge {
+    display: none;
+}
+
+.elementor-951 .elementor-element.elementor-element-364fabb>.elementor-container>.elementor-column>.elementor-widget-wrap {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.elementor-1550 .elementor-element.elementor-element-364fabb>.elementor-container>.elementor-column>.elementor-widget-wrap {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}

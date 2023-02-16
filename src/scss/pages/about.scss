@@ -1,0 +1,15 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use "../sections/_about-banner.scss" as *;
+@use "../sections/_about-our-different.scss" as *;
+@use "../sections/_about-our-partners.scss" as *;
+@use "../sections/_about-trustedby.scss" as *;
+@use "../sections/_whyus.scss" as *;
+
+//reset section padding on section
+.whyus{
+    margin: 0px auto;
+	max-width: 1920px;
+    padding-bottom: 160px;
+    padding-top: 0px;
+}

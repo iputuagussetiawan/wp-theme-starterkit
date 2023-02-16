@@ -1,0 +1,54 @@
+@use "config/variable" as *;
+
+// ACCORDION OVERRIDES
+// $accordion-padding-y: 1.5rem; // LEAVE THE PADDING-Y TO DEFAULT
+// $accordion-padding-x: 1.5rem; // LEAVE THE PADDING-X TO DEFAULT
+$accordion-icon-color: $primary;
+$accordion-icon-active-color: $primary;
+// $accordion-icon-width:                    1.875rem; // LEAVE THE WIDTH TO DEFAULT
+// $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/> <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+// $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/>  <path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+
+// ##########################################
+//   OPTION 1:
+// - IMPORT BOOTSTRAP ( The entire bootstrap with everything)
+// ##########################################
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// ##########################################
+//   OPTION 2:
+// - IMPORT IMPORT ONLY THE PART OF BOOTSTRAP YOU WANT TO USE
+// ##########################################
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+//@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+// @import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/utilities";
+
+// 4. Include any optional Bootstrap components as you like
+// @import "../../node_modules/bootstrap/scss/root";
+// @import "../../node_modules/bootstrap/scss/reboot";
+// @import "../../node_modules/bootstrap/scss/type";
+// @import "../../node_modules/bootstrap/scss/images";
+// @import "../../node_modules/bootstrap/scss/containers";
+// @import "../../node_modules/bootstrap/scss/grid";
+// @import "../../node_modules/bootstrap/scss/buttons";
+// @import "../../node_modules/bootstrap/scss/button-group";
+// @import "../../node_modules/bootstrap/scss/nav";
+// @import "../../node_modules/bootstrap/scss/navbar";
+// @import "../../node_modules/bootstrap/scss/forms";
+// @import "../../node_modules/bootstrap/scss/accordion";
+
+
+// Helpers
+//@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+//@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// 5. Add additional custom code here

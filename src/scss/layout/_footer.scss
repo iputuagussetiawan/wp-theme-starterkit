@@ -1,0 +1,214 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+@use "../components/cards/_card-booking.scss";
+
+.footer {
+	@include imageRatio(234,82,true,contain,'logo');
+	margin: 0px auto;
+	max-width: 1920px;
+	background-color: $primary;
+	position: relative;
+	z-index: 1;
+	&__grid{
+		display: grid;
+		grid-template-columns: 3fr 1fr 1fr 1fr;
+		gap: 32px;
+	}
+	&__logo-container{
+		display: inline-block;
+		margin-bottom: 20px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	&__certification-label{
+		margin-bottom: 8px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 28px;
+		color: $neutral-30;
+	}
+
+	&__certification-image-container{
+		max-width: 200px;
+		margin-bottom: 24px;
+		display: inline-block;
+	}
+
+	&__title{
+		margin-bottom: 12px;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 30px;
+		color: $white;
+	}
+	
+	&__menu-lists{
+		list-style: none;
+		padding: 0px;
+	}
+	&__menu-item{
+		margin-bottom: 10px;
+	}
+	&__menu-link{
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 28px;
+		color: $neutral-50;
+		transition: 0.4s ease;
+
+		&:hover{
+			color: $secondary-80;
+		}
+	}
+	&__copyright{
+		grid-column: span 4;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 23px 0 25px 0px;
+		color: $white;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 35px;
+		border-top: 1px solid $white;
+	}
+
+	&__copyright-text{
+		margin: 0px;
+		font-weight: 300;
+	}
+	
+	&__copyright-link{
+		color: $white;
+			transition: 0.4s ease;
+			&:hover{
+				color:$secondary-80;
+			}
+	}
+
+	&__social-icon{
+		margin: 0px;
+		list-style: none;
+		padding: 0px;
+	}
+
+	&__social-item{
+		display: inline-block;
+		margin-right: 8px;
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+
+	&__social-link{
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		border: 1px solid $neutral-60;
+		border-radius: 4px;
+		transition: 0.4s ease;
+
+		&:hover{
+			background-color:$secondary-80;
+			border-color: $secondary-80;
+		}
+	}
+
+	@media only screen and (max-width: 1600px) {
+		@include imageRatio(170,59.6,true,contain,'logo');
+		&__title{
+			margin-bottom: 12px;
+			font-size: 22px;
+			line-height: 24px;
+		}
+		&__menu-link{
+			font-size: 16px;
+			line-height: 24px;
+		}
+		&__copyright-text{
+			font-size: 14px;
+		}
+
+		&__certification-label {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	@media only screen and (max-width: 1440px) {
+		@include imageRatio(150,53,true,contain,'logo');
+		&__certification-image-container {
+			max-width: 170px;
+		}
+		&__title{
+			margin-bottom: 12px;
+			font-size: 18px;
+			line-height: 20px;
+		}
+		&__menu-link{
+			font-size: 14px;
+			line-height: 22px;
+		}
+		&__copyright-text{
+			font-size: 12px;
+		}
+		&__social-link {
+			width: 37px;
+			height: 37px;
+			line-height: 34px;
+		}
+
+	}
+
+	@media only screen and (max-width: 991.98px) {
+		&__grid{
+			grid-template-columns: repeat(3,1fr);
+			column-gap: 0px;
+			row-gap: 42px;
+		}
+		&__infos-container{
+			text-align: center;
+			grid-column: span 4;
+		}
+		&__copyright{
+			grid-column: span 3;
+		}
+	}
+
+	@media only screen and (max-width: 767.98px) {
+		&__grid{
+			grid-template-columns:1fr;
+			text-align: center;
+		}
+		&__infos-container{
+			grid-column: 1;
+		}
+		&__certification-image-container{
+			margin-bottom: 16px;
+			max-width: 170px;
+		}
+		&__title{
+			margin-bottom: 12px;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 23px;
+		}
+		&__copyright{
+			margin-bottom: 16px;
+			grid-column: span 1;
+			flex-direction: column;
+		}
+
+		&__copyright-text{
+			margin-bottom: 16px;
+		}
+	}
+
+	@media only screen and (max-width: 575.98px) {
+		&__certification-image-container{
+			max-width: 159px;
+		}
+	}
+}

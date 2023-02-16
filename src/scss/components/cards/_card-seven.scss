@@ -1,0 +1,73 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-seven{
+    @include imageRatio(64,64,true,contain);
+
+    &__image-container{
+        margin-bottom: 8px;
+    }
+    &__title{
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $neutral-100;
+    }
+    &__content{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+        p{
+            &:last-child{
+                margin: 0px;
+            }
+        }
+    }
+
+    &--white{
+        @extend .card-seven;
+        background-color: transparent;
+        .card-seven__title{
+            color: $white;
+        }
+        .card-seven__content{
+            color: $white;
+        }
+
+    }
+
+    @media only screen and (max-width: 1440px) {
+        @include imageRatio(60,60,true,contain);
+        &__title{
+            margin-bottom: 14px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__content{
+            font-size: 14px;
+            line-height: 24px;
+            p{
+                &:last-child{
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        @include imageRatio(55,55,true,contain);
+        &__image-container{
+            margin-bottom: 10px;
+        }
+        &__title{
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &__content{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

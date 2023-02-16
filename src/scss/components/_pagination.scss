@@ -1,0 +1,90 @@
+@use "../config/_mixin.scss" as *;
+@use "../config/_variable.scss" as *;
+
+
+.pagination{
+    flex-wrap: wrap;
+    .page-item{
+        margin: 5px 5px;
+    }                            
+    .page-link.active, .active > .page-link {
+        z-index: 3;
+        color:$white;
+        background: #30344D;
+        border: 1px solid rgba(94, 85, 80, 0.3);
+        border-radius: 10px;
+    }
+
+    .page-link,
+    .page-numbers{
+        font-size: 18px;
+        padding: 13px 23px;
+        border: 1px solid rgba(94, 85, 80, 0.3);
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
+    .page-link.next,
+    .page-link.prev
+    {
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 17px 8px 8px 8px;
+    }
+
+    .page-item:first-child .page-link {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .page-item:last-child .page-link {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        .page-link,
+        .page-numbers{
+            font-size: 16px;
+            padding: 8px 18px;
+            border-radius: 8px;
+        }
+        .page-link.next,
+        .page-link.prev
+        {
+            width: 44px;
+            height: 42px;
+            padding: 12px 8px 8px 8px;
+        }
+        .page-item:first-child .page-link {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+    
+        .page-item:last-child .page-link {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .page-item{
+            margin: 2px 2px;
+        }  
+        .page-link,
+        .page-numbers{
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        .page-link.next, 
+        .page-link.prev {
+            width: 49px;
+            height: 42px;
+            padding: 11px 8px 6px 8px;
+        }
+    }
+}

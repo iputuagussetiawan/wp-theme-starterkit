@@ -1,0 +1,146 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-elnvoicing-two{
+    @include imageRatio(581,660);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+
+    &:nth-child(2) &__info-container{
+        order: 1;
+    }
+    &:nth-child(2) &__image-container{
+        order: 2;
+    }
+
+    &:nth-child(2) &__content{
+        padding-left: 0px;
+        padding-right: 80px;
+    }
+
+    &__image-container{
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    &__content{
+        padding-left: 80px;
+        h3,h4,h5{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            color: #0A0A0A;
+        }
+
+        P{
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: #404040;
+        }
+
+        ul{
+            margin-bottom: 20px;
+            list-style: none;
+            padding: 0px;
+        }
+
+        li{
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: $neutral-90;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                background-color: $secondary-80;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__content{
+            padding-left: 80px;
+            h3,h4,h5{
+                font-size: 22px;
+                line-height: 22px;
+            }
+    
+            P{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+            }
+    
+            ul{
+                margin-bottom: 20px;
+                list-style: none;
+                padding: 0px;
+            }
+    
+            li{
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 12px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        grid-template-columns: repeat(1,1fr);
+
+        &:nth-child(2) &__info-container{
+            order: 2;
+        }
+        &:nth-child(2) &__image-container{
+            order: 1;
+        }
+    
+        &:nth-child(2) &__content{
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        &__content{
+            padding-left: 0px;
+        }
+
+        &__image-container{
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        &__image{
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__content{
+            P{
+                font-size: 16px;
+                line-height: 24px;
+            }
+            li{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}

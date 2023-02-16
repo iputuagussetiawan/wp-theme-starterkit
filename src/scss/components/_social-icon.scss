@@ -1,0 +1,24 @@
+@use "../config/variable" as *;
+.social-icons{
+    margin: 24px 0px;
+    list-style: none;
+    padding: 0;
+    &__item{
+        display: inline-block;
+        margin-right: 16px;
+        border: 1px solid #E0E0E0;
+    }
+
+    &__link{
+        display: inline-block;
+        color: $primary;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    &__icon{
+        vertical-align: middle;
+    }
+}

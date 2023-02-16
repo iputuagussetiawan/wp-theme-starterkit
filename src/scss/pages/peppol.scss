@@ -1,0 +1,255 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+
+@use '../components/cards/_card-peppolcontext.scss' as *;
+@use '../components/cards/_card-peppolcontact.scss' as *;
+
+.peppol-welcome{
+    @include imageRatio(1329, 640);
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 30px;
+    }
+
+    &__grid{
+        grid-column: 2/12;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        @include imageRatio(384, 882);
+        &__inner{
+            gap: 0px;
+        }
+        &__grid{
+            grid-column: 1/13;
+        }
+    }
+}
+
+.peppol-customers{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo-container{
+        margin: 32px 100px;
+    }
+
+    &__logo{
+        max-width: 200px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__logo-container{
+            margin: 16px 80px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__logo-container{
+            margin: 42px 80px;
+        }
+    }
+}
+
+.peppol-what{
+    @include imageRatio(1599, 524);
+    background-color: #FdFdFd;
+    &__inner{
+        display:grid;
+        grid-template-columns:repeat(12,1fr);
+        gap: 30px;
+    }
+    &__title-wrapper{
+        grid-column: 3/11;
+        text-align: center;
+    }
+
+    &__grid{
+        grid-column: 1/13;
+    }
+   
+    
+    @media only screen and (max-width: 767.98px) {
+        @include imageRatio(382, 998);
+        &__title-wrapper{
+            grid-column: 1/13;
+        }
+        &__inner{
+            gap: 0px;
+        }
+    }
+}
+
+.peppol-education{
+    background-color: #fdfdfd;
+
+    &__inner{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    &__grid{
+        grid-column: 2/12;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        list-style: none;
+        padding: 0px;
+    }
+    &__item{
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 24px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background-color: $secondary-80;
+            border-radius: 100%;
+        }
+    }
+    &__link{
+        color: $secondary-80;
+        text-decoration: underline;
+        &:hover{
+            color: $secondary-80;
+            text-decoration: underline;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__inner{
+            gap: 0px;
+        }
+        &__grid{
+            grid-column: 1/13;
+        }
+        &__list{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__item{
+            margin-bottom: 16px;
+            padding-left: 24px;
+            font-size: 14px;
+            line-height: 24px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.peppol-connected{
+    background: #E5F6F3;
+    &__inner{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    &__grid{
+        grid-column: 4/10;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-column: 3/11;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__inner{
+            gap: 0px;
+        }
+        &__grid{
+            grid-column: 1/13;
+        }
+    }
+}
+
+.peppol-context{
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 80px  0px;
+        }
+    }
+}
+
+.peppol-connect{
+  
+    &__inner{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    &__grid{
+        grid-column: 3/11;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__inner{
+            gap: 0px;
+        }
+    
+        &__grid{
+            grid-column: 1/13;
+        }
+    }
+}
+
+.peppol-contact{
+    padding-bottom: 160px;
+    background: #E5F6F3;
+    &__inner{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    &__grid{
+        grid-column: 3/11;
+    }
+
+    &__btn-wrapper{
+        .wpcf7-spinner{
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        padding-bottom: 120px;
+        &__inner{
+            gap: 0px;
+        }
+        &__grid{
+            grid-column: 1/13;
+        }
+    }
+}

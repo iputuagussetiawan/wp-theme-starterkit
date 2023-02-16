@@ -1,0 +1,237 @@
+@use "../config/variable" as *;
+
+.btn-wrapper{
+    width: 100%;
+    height: 50px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 16px 40px ;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 6px;
+
+    &:hover{
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &.ja{
+        font-size: 13px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+        padding: 12px 22px ;
+        font-size: 13px;
+        &.ja{
+            font-size: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        padding: 8px 14px ;
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        padding: 12px 24px;
+      
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        font-size: 16px;
+    }
+
+    
+}
+
+.btn-primary{
+    color: $white;
+    background-color:$primary-80;
+    border-color: $primary-80;
+    &:hover{
+        color: $white;
+        background-color: $primary-hover;
+        border-color: $primary-80;
+    }
+
+    &:focus,
+    &:active{
+        color: $white !important;
+    }
+    &.disabled {
+        color: $white;
+    }
+}
+
+.btn-secondary{
+    background-color:$secondary-80;
+    color: $primary-80;
+    border-color: $secondary-80;
+    &:hover{
+        background-color: $secondary-hover;
+        border-color: $secondary-hover;
+    }
+}
+.btn-secondary-outline{
+    background-color:$white;
+    color: $secondary-80;
+    border-color: $secondary-80;
+    &:hover{
+        background-color: #F0FDFB;
+        border-color: $secondary-80;
+        color: $secondary-80;
+    }
+}
+
+.btn-warning{
+    background: #C19E74;
+    border: 1px solid #C19E74;
+    color: $white;
+    border: 1px solid #C19E74;
+    &:hover{
+        background-color: $white;
+        border: 1px solid #C19E74;
+        color: #C19E74;
+    }
+}
+
+.btn-warning-two{
+    background: #BA8A51;
+    border: 1px solid #BA8A51;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        border: 1px solid #be9665;
+        border: 1px solid #be9665;
+        color:#BA8A51;
+    }
+}
+
+.btn-success{
+    background-color:  #16B056;
+    border: 1px solid  #16B056;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        border: 1px solid  #16B056;
+        color: #16B056;
+    }
+}
+
+
+
+.btn-ripple {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    span {
+        position: absolute;
+        background: $white;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+        animation: ripple 1s linear infinite;
+    }
+}
+
+.whatapp-btn{
+    display: inline-block;
+    position: fixed;
+    bottom: 70px;
+    right: -100px;
+    width: 54px;
+    height: 54.32px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #0A990A;
+    border-radius: 16px 0 0 16px; ;
+    z-index: 100;
+    transition: 0.4s ease;
+
+    &:hover{
+        background-color: #11b911;
+    }
+    &.active{
+        right: 0px;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+.scrolltop-btn{
+    display: inline-block;
+    position: fixed;
+    bottom: 130px;
+    right: -100px;
+    width: 54px;
+    height: 54.32px;
+    line-height: 50px;
+    text-align: center;
+    background-color: $black;
+    border-radius: 16px 0 0 16px; ;
+    z-index: 100;
+    transition: 0.4s ease;
+
+    &:hover{
+        background-color: #131212;
+    }
+    &.active{
+        right: 0px;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+
+/*-----------------------------------------
+//////////////// WHATAPPS /////////////////
+-----------------------------------------*/
+
+.btn-show-more,
+.btn-show-less{
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    color: #0BAC4B;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 575.98px) {
+        font-size: 10px;
+    }
+}
+
+.w3eden .btn{
+    font-family: $primary-font !important;
+    font-weight: 300px !important;
+}
+

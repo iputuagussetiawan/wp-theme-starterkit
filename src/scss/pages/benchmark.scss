@@ -1,0 +1,86 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+@use "../sections/_about-trustedby.scss" as *;
+@use "../sections/_whyus.scss" as *;
+@use "../components/cards/_card-three.scss" as *;
+
+.whyus {
+	padding-top: 0px;
+    padding-bottom: 160px;
+}
+
+.personalized-report {
+	margin: 0px auto;
+	max-width: 1920px;
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 24px;
+	}
+	&__grid {
+		grid-column: 2/12;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px 33px;
+	}
+
+	@media only screen and (max-width: 1440px) {
+		&__grid {
+			gap: 24px 24px;
+		}
+	}
+
+	@media only screen and (max-width: 1199.98px) {
+		&__grid {
+			grid-column: 1/13;
+		}
+	}
+
+	@media only screen and (max-width: 767.98px) {
+		&__grid {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+.assesment {
+	margin: 0px auto;
+	max-width: 1920px;
+	background-color: #e5f6f3;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	&__grid {
+		grid-column: 3/11;
+		overflow: hidden;
+		border-radius: 12px;
+	}
+
+	&__iframe {
+		display: block;
+	}
+
+	&__note {
+        margin-top: 16px;
+        font-size: 18px;
+		grid-column: 3/11;
+		overflow: hidden;
+        text-align: center;
+	}
+
+	@media only screen and (max-width: 767.98px) {
+        &__note {
+            font-size: 16px;
+        }
+		&__grid,&__note {
+			grid-column: 1/13;
+		}
+		// &__iframe {
+		// 	max-height: 625px;
+		// 	height: 625px;
+		// }
+	}
+}

@@ -1,0 +1,62 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+.privacy-notice{
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 30px;
+    }
+
+    &__inner{
+        grid-column: 3/11;
+    }
+
+    &__content{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #404040;
+
+        h2,h3,h4{
+            margin-top: 40px;
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 42px;
+            color: #1F140E;
+        }
+        ul{
+            margin-bottom: 24px;
+            li{
+                line-height: 42px;
+            }
+        }
+        p{
+            margin-bottom: 24px;
+           
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__inner{
+            grid-column: 2/12;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__inner{
+            grid-column: 1/13;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__content{
+            font-size: 16px;
+            line-height: 24px;
+            h2,h3,h4{
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+}

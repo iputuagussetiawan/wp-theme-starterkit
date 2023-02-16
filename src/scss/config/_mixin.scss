@@ -1,0 +1,84 @@
+@use 'sass:math';
+
+// |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| //
+// | tmdrMIX v.1.0.2                         | //
+// | last update : 02 / 09 / 2021            | //
+// |_________________________________________| //
+
+// transform with fallback
+@mixin transform($declaration) {
+    -webkit-transform: #{$declaration};
+    -moz-transform: #{$declaration};
+    -ms-transform: #{$declaration};
+    -o-transform: #{$declaration};
+    transform: #{$declaration};
+}
+
+// transition with fallback
+@mixin transition($option) {
+    -webkit-transition: #{$option};
+    -moz-transition: #{$option};
+    -ms-transition: #{$option};
+    -o-transition: #{$option};
+    transition: #{$option};
+}
+
+// display flex with fallback
+@mixin displayFlex {
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// make ratio classes
+@mixin imageRatio($imageWidth, $imageHeight, $maxWidth: false, $imageFit: cover, $className : 'image') {
+    &__#{$className}-container {
+        position: relative;
+        width: 100%;
+        @if ( $maxWidth ) {
+            display: inline-block;
+            @if ( $maxWidth == true ) {
+                max-width: #{$imageWidth}px;
+            } @else {
+                max-width: #{$maxWidth}px;
+            }
+        } @else {
+            display: block;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: $imageFit;
+        }
+        &:before {
+            content: "";
+            display: block;
+            padding-top: math.div($imageHeight, $imageWidth) * 100%;
+        }
+    }
+}
+
+// text elypsis mixin
+@mixin elypsis($font-size: 16, $lines-to-show: 1, $line-height : 1.4) {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: #{$font-size*$line-height*$lines-to-show}px; /* Fallback for non-webkit */
+    font-size: #{$font-size}px;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+};
+
+// element state mixin
+@mixin fullState {
+    &:hover, &:active, &:focus, &:active:hover, &:active:focus {
+        @content;
+    }
+}

@@ -1,0 +1,441 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+@use '../components/cards/_card-six.scss' as *;
+@use '../components/cards/_card-seven.scss' as *;
+
+
+.page-header__info-container{
+    padding-bottom:0px;
+}
+
+.howitwork{
+    margin: 0px auto;
+	max-width: 1920px;
+    background-color: $primary-80;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 102px 100px;
+        .card-six{
+            &:last-child::before,
+            &:last-child::after{
+                display: none !important;
+            }
+        }
+        .card-six.step-1,
+        .card-six.step-2,
+        .card-six.step-3,
+        .card-six.step-4,
+        .card-six.step-5,
+        .card-six.step-6{
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                width: 100px;
+                height: 8px;
+                background-color: #0FD7BD;
+               
+            }
+
+            &::after{
+                content:'';
+                position: absolute;
+                top: 50%;
+                right: -71px;
+                transform: translateY(-50%);
+                width: 42px;
+                height: 42px;
+                line-height: 48px;
+                border-radius: 100%;
+                text-align: center;
+                background-color: #0FD7BD;
+                background: url('https://api.iconify.design/ion/chevron-forward.svg?color=%2330344d') no-repeat center center / contain, #0FD7BD;
+                background-size: 24px;
+            }
+        }
+
+        .card-six.step-4,
+        .card-six.step-5,
+        .card-six.step-6{
+            &::before{
+                left: unset;
+                right: 100%;
+            }
+
+            &::after{
+                content: '';
+                right: unset;
+                left: -71px;
+                background: url('https://api.iconify.design/ion/chevron-back-outline.svg?color=%2330344d')no-repeat center center / contain, #0FD7BD;
+                background-size: 24px;
+            }
+        }
+
+        .card-six.step-1{
+            order: 1;
+            
+        }
+        .card-six.step-2{
+            order: 2;
+        }
+        .card-six.step-3{
+            order: 3;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%,0);
+                width: 8px;
+                height: 102px;
+            }
+
+            &::after{
+                content:'';
+                position: absolute;
+                top: calc(100% + 33px);
+                right: 50%;
+                transform: translate(50%,0);
+                background: url('https://api.iconify.design/ion/chevron-down-outline.svg?color=%2330344d') no-repeat center center / contain, #0FD7BD;
+                background-size: 24px;
+            }
+        }
+        .card-six.step-4{
+            order: 6;
+        }
+        .card-six.step-5{
+            order: 5;
+        }
+        .card-six.step-6{
+            order: 4;
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__grid{
+            gap: 60px 60px;
+            .card-six.step-1,
+            .card-six.step-2,
+            .card-six.step-3,
+            .card-six.step-4,
+            .card-six.step-5,
+            .card-six.step-6{
+                &::after{
+                    top: 50%;
+                    right: -47px;
+                    width: 32px;
+                    height: 32px;
+                    background-size:18px
+                }
+            }
+
+            .card-six.step-4,
+            .card-six.step-5,
+            .card-six.step-6{
+                &::before{
+                    left: unset;
+                    right: 100%;
+                }
+
+                &::after{
+                    left: -47px;
+                    background-size:18px
+                }
+            }
+
+            .card-six.step-1{
+                order: 1;
+                
+            }
+            .card-six.step-2{
+                order: 2;
+            }
+            .card-six.step-3{
+                order: 3;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%,0);
+                    width: 8px;
+                    height: 102px;
+                }
+    
+                &::after{
+                    content:'';
+                    position: absolute;
+                    top: calc(100% + 15px);
+                    right: 50%;
+                    background-size:18px
+                }
+            }
+            .card-six.step-4{
+                order: 6;
+            }
+            .card-six.step-5{
+                order: 5;
+            }
+            .card-six.step-6{
+                order: 4;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            grid-template-columns: repeat(2,1fr);
+            .card-six.step-1{
+                order: 1;
+                
+            }
+            .card-six.step-2{
+                order: 2;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%,0);
+                    width: 8px;
+                    height: 102px;
+                }
+    
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: calc(100% + 15px);
+                    right: 50%;
+                    transform: translate(50%,0);
+                    background: url('https://api.iconify.design/ion/chevron-down-outline.svg?color=%2330344d') no-repeat center center / contain, #0FD7BD;
+                    background-size:18px;
+                }
+            }
+            .card-six.step-3{
+                order: 4;
+                &::before{
+                    left: unset;
+                    top: 50%;
+                    right: 100%;
+                    width: 100px;
+                    height: 8px;
+                    transform: translate(0,-50%);
+                }
+    
+                &::after{
+                    content: '';
+                    top: 50%;
+                    right: 100%;
+                    left: -46px;
+                    transform: translate(0,-50%);
+                    background: url('https://api.iconify.design/ion/chevron-back-outline.svg?color=%2330344d')no-repeat center center / contain, #0FD7BD;
+                    background-size:18px;
+                }
+            }
+            .card-six.step-4{
+                order: 3;
+                &::before{
+                    left: 50%;
+                    top: 100%;
+                    right: unset;
+                    width: 8px;
+                    height: 102px;
+                    transform: translate(-50%,0);
+                }
+    
+                &::after{
+                    content: '';
+                    top: calc(100% + 15px);
+                    left: 50%;
+                    right: unset;
+                    transform: translate(-50%,0);
+                    background: url('https://api.iconify.design/ion/chevron-down-outline.svg?color=%2330344d') no-repeat center center / contain, #0FD7BD;
+                    background-size:18px;
+                }
+            }
+            .card-six.step-5{
+                order: 5;
+                &::before{
+                    left: 100%;
+                    top: 50%;
+                    right: unset;
+                    width: 100px;
+                    height: 8px;
+                    transform: translate(0px,-50%);
+                }
+    
+                &::after{
+                    content: '';
+                    top: 50%;
+                    left: calc(100% + 15px);
+                    right: unset;
+                    transform: translate(0px,-50%);
+                    background: url('https://api.iconify.design/ion/chevron-forward.svg?color=%2330344d') no-repeat center center / contain, #0FD7BD;
+                    background-size:18px;
+                }
+            }
+            .card-six.step-6{
+                order: 6;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            grid-template-columns: repeat(1,1fr);
+            .card-six.step-1,
+            .card-six.step-2,
+            .card-six.step-3,
+            .card-six.step-4,
+            .card-six.step-5,
+            .card-six.step-6{
+                &::before{
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%,0px);
+                    width: 8px;
+                    height: 102px;
+                }
+    
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: calc(100% + 15px);
+                    left: 50%;
+                    transform: translate(-50%,0px);
+                    background: url('https://api.iconify.design/ion/chevron-down-outline.svg?color=%2330344d') no-repeat center center / contain, #0FD7BD;
+                    background-size: 18px;
+                }
+            }
+
+            .card-six.step-1{
+                order: 1;
+            }
+            .card-six.step-2{
+                order: 2;
+            }
+            .card-six.step-3{
+                order: 3;
+            }
+            .card-six.step-4{
+                order: 4;
+            }
+            .card-six.step-5{
+                order: 5;
+            }
+            .card-six.step-6{
+                order: 6;
+            }
+        }
+    }
+}
+
+.benefits{
+    margin: 0px auto;
+	max-width: 1920px;
+    background-color: $secondary-30;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 31px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__grid{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
+
+.customers-benefits{
+    margin: 0px auto;
+	max-width: 1920px;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap:31px;
+    }
+    &__inner{
+        grid-column: 2/12;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 72px 31px;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__inner{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            gap:0px;
+        }
+        &__inner{
+            gap: 42px 31px;
+        }
+    }
+}
+
+.elnvoicing-trustedby{
+    margin: 0px auto;
+	max-width: 1920px;
+    &__grid{
+        display: flex;    
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__image-container{
+        flex: 0 0 20%;
+        margin: 12px 12px 64px 12px;
+        text-align: center;
+        
+    }
+
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__image-container{
+            flex: 0 0 12.5%;
+        }
+    }
+    @media only screen and (max-width: 1199.98px) {
+        &__image-container{
+            flex: 0 0 16.6%;
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__image-container{
+            flex: 0 0 20%;
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__image-container{
+            flex: 0 0 25%;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        &__image-container{
+            flex: 0 0 33.3%;
+        }
+    }
+    @media only screen and (max-width: 380px) {
+        &__image-container{
+            flex: 0 0 50%;
+        }
+    }
+}

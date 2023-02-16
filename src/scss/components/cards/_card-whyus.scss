@@ -1,0 +1,117 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-whyus{
+    @include imageRatio(646,424,true);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+    align-items: center;
+
+    &:nth-child(2) &__image-container{
+        grid-column: 2/7;
+        grid-row: 1;
+    }
+    &:nth-child(2) &__info-container{
+        grid-column: 8/12;
+        grid-row: 1;
+     }
+
+    &__icon-container{
+        margin-bottom: 2px;
+        max-width: 60px;
+    }
+
+    &__info-container{
+        grid-column: 2/6;
+        grid-row: 1;
+    }
+
+    &__image-container{
+        overflow: hidden;
+        grid-column: 7/12;
+        grid-row: 1;
+        border-radius: 8px;
+    }
+
+    &__title{
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        text-transform: capitalize;
+        color: $neutral-100;
+    }
+
+    &__body{
+        margin-bottom: 24px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+        p{
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    @media only screen and (max-width: 1440px) {
+        @include imageRatio(600,320,true);
+       
+
+        &__title{
+            margin-bottom: 14px;
+            font-size: 22px;
+            line-height: 32px;
+        }
+    
+        &__body{
+            margin-bottom: 22px;
+            font-size: 14px;
+            line-height: 24px;
+            p{
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        gap: 0px;
+        &__title{
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        &__body{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        gap: 40px 0px;
+        &__info-container,
+        &:nth-child(2) &__info-container{
+            grid-column: 1/13;
+            grid-row: 1;
+        }
+    
+        &__image-container,
+        &:nth-child(2) &__image-container{
+            grid-column: 1/13;
+            grid-row: 2;
+        }
+
+        &__body{
+            margin-bottom: 0px;
+        }
+        &__icon-container{
+            max-width: 45px;
+        }
+       
+        &__btn-wrapper{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@use "../config/_variable.scss" as *;
+
+:root {
+	--section-padding: 120px;
+	--margin-bottom-title-wrapper: 70px;
+	--font-size-section-title: 40px;
+	--line-height-section-title: 50px;
+	--font-size-section-title-description: 18px;
+	--margin-bottom-section-title: 8px;
+}
+
+@media only screen and (max-width: 1600px) {
+	:root {
+		--section-padding: 100px;
+		--margin-bottom-title-wrapper: 64px;
+		--margin-bottom-title-wrapper: 55px;
+		--font-size-section-title: 37px;
+		--line-height-section-title: 42px;
+		--font-size-section-title-description: 16px;
+	}
+}
+
+@media only screen and (max-width: 1440px) {
+	:root {
+		--section-padding: 80px;
+		--margin-bottom-title-wrapper: 64px;
+		--margin-bottom-title-wrapper: 55px;
+		--font-size-section-title: 32px;
+		--line-height-section-title: 42px;
+		--font-size-section-title-description: 16px;
+	}
+}
+
+@media only screen and (max-width: 1399.98px) {
+	:root {
+		--font-size-section-title: 27px;
+		--line-height-section-title: 37px;
+		--font-size-section-title-description: 16px;
+	}
+}
+
+@media only screen and (max-width: 1199.98px) {
+	:root {
+		--section-padding: 70px;
+	}
+}
+
+@media only screen and (max-width: 991.98px) {
+	:root {
+		--font-size-section-title: 32px;
+	}
+}
+
+@media only screen and (max-width: 767.98px) {
+	:root {
+		--font-size-section-title-description: 18px;
+	}
+}
+
+@media only screen and (max-width: 575.98px) {
+	:root {
+		--font-size-section-title: 27px;
+		--font-size-section-title-description: 16px;
+	}
+}
+/*-----------------------------------------
+//////////// SECTION PADDING //////////////
+-----------------------------------------*/
+.section-padding {
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+	&--bottom {
+		@extend .section-padding;
+		padding-top: 0px;
+		padding-bottom: var(--section-padding);
+	}
+
+	&--top {
+		@extend .section-padding;
+		padding-top: var(--section-padding);
+		padding-bottom: 0px;
+	}
+}
+/*-----------------------------------------
+/////////////////////// SECTION PADDING END
+-----------------------------------------*/
+
+/*-----------------------------------------
+////////////// SECTION TITLE //////////////
+-----------------------------------------*/
+.section-title-wrapper {
+	position: relative;
+	margin-bottom: var(--margin-bottom-title-wrapper);
+	z-index: 10;
+
+	&.additional-margin-top {
+		margin-top: 42px;
+	}
+}
+.section-title {
+	position: relative;
+	margin-bottom: var(--margin-bottom-section-title);
+	font-weight: 700;
+	font-size: var(--font-size-section-title);
+	line-height: var(--line-height-section-title) ;
+	color: $neutral-100;
+	z-index: 5;
+
+	&__subtitle {
+		margin-bottom: 8px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 28px;
+		color: $secondary-80;
+	}
+
+	&__description {
+		margin: 0px;
+		font-weight: 300;
+		font-size: var(--font-size-section-title-description);
+		line-height: 28px;
+		color:$neutral-90;
+
+		a{
+			text-decoration: underline;
+			&:hover{
+				text-decoration: underline;
+				color: $secondary-80;
+			}
+		}
+		p{
+			margin-bottom: 0px;
+		}
+	}
+
+	@media only screen and (max-width: 767.98px) {
+		&__subtitle {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+}
+
+.section-subtitle{
+	margin-bottom: 4px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+.section-content{
+	font-size: 16px;
+	line-height: 1.75;
+}
+/*-----------------------------------------
+///////////////////////// SECTION TITLE END
+-----------------------------------------*/
+
+.section-content{
+	font-family: $primary-font;
+	.elementor-widget-text-editor{
+		font-family: $primary-font;
+	}
+	.contact-form-elemntor{
+		width: 60% !important;
+		margin: 0 auto 64px auto;
+	}
+
+	@media only screen and (max-width: 767.98px) {
+		.contact-form-elemntor{
+			width: 100% !important;
+		}
+	}
+}

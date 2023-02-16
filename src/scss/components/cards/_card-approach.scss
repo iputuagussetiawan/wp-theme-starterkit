@@ -1,0 +1,75 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-approach{
+    text-align: center;
+    &__value,
+    &__value-title{
+        display: inline-block;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 94px;
+        color: $secondary-80;
+    }
+    &__label{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: $neutral-30;
+    }
+
+    @media only screen and (max-width: 1600px) {
+        &__value,
+        &__value-title{
+            font-size: 64px;
+            line-height: 80px;
+        }
+    }
+    @media only screen and (max-width: 1440px) {
+        &__value,
+        &__value-title{
+            font-size: 47px;
+            line-height: 60px;
+        }
+        &__label{
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    @media only screen and (max-width: 1199.98px) {
+        &__value,
+        &__value-title{
+            font-size: 42px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__value,
+        &__value-title{
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__value,
+        &__value-title{
+            font-size: 48px;
+            line-height: 60px;
+        }
+       
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__value,
+        &__value-title{
+            font-size: 42px;
+            line-height: 55px;
+        }
+        &__label{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-quote{
+    padding: 40px;
+    background: $primary-30;
+    border-radius: 8px;
+
+    &__content{
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $neutral-90;
+    }
+
+    &__info-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__user-name{
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $primary-80;
+    }
+
+    &__user-position{
+        margin: 0px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $neutral-80; 
+    }
+
+    @media only screen and (max-width: 1440px) {
+        padding: 32px;
+        &__content{
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    
+        &__info-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        &__user-name{
+            font-size: 18px;
+            line-height: 24px;
+        }
+    
+        &__user-position{
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__icon{
+            max-width: 50px;
+        }
+        &__content{
+            font-size: 14px;
+            line-height: 24px;
+
+            p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        padding: 32px;
+        &__content{
+            font-size: 18px;
+            line-height: 28px;
+        }
+        &__user-name{
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &__user-position{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__icon{
+            width: 39.22px;
+            height: 26.22px;
+        }
+    }
+}

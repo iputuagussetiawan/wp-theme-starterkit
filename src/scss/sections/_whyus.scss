@@ -1,0 +1,32 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/cards/card-whyus' as *;
+
+.whyus{
+    margin: 0px auto;
+	max-width: 1920px;
+    position: relative;
+    &__grid{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px 0px;
+        z-index: 1;
+    }
+
+    &__bg{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: red($color: #000000);
+        width: 100%;
+        height: auto;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            gap: 100px 0px;
+        }
+    }
+}

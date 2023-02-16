@@ -1,0 +1,286 @@
+@use  '../config/_variable.scss' as *;
+@use  '../config/_mixin.scss' as *;
+@use '../components/cards/_card-two.scss' as *;
+
+.approach-banner{
+    @include imageRatio(710,555);
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        overflow-x: hidden;
+    }
+
+    &__subtitle{
+        margin-bottom: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: $secondary-80;
+    }
+    &__title{
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: capitalize;
+        color: $neutral-100;
+    }
+    &__content{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+    }
+
+    @media only screen and (max-width:1440px) {
+        &__grid{
+            grid-template-columns: 1fr 1fr;
+        }
+        &__title{
+            font-size: 37px;
+            line-height: 47px;
+        }
+        &__content{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media only screen and (max-width:1399.98px) {
+        &__grid{
+            grid-template-columns: 1fr 1fr;
+        }
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        &__content{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+        }
+        &__title{
+            font-size: 32px;
+            line-height: 42px;
+        }
+        &__content{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        
+
+        &__subtitle{
+            font-size: 16px;
+            line-height: 26px;
+        }
+        
+       
+    }
+}
+
+.approach-steps{
+    margin: 0px auto;
+	max-width: 1920px;
+    background-color:$primary-80;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 42px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+        &__grid{
+            gap: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__grid{
+            gap: 24px;
+        }
+    }
+    @media only screen and (max-width: 1199.98px) {
+        &__grid{
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+    }
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    @media only screen and (max-width: 767.98px) {
+        &__grid{
+            gap: 32px
+        }
+    }
+}
+.approach-detail{
+    @include imageRatio(56,56,true,contain,'icon');
+    margin: 0px auto;
+	max-width: 1920px;
+    &__section{
+        background-color: $white;
+        &:nth-child(2){
+            background-color: $neutral-20;;
+        }
+        &:nth-child(3){
+            background-color: $secondary-30;
+        }
+        &:last-child{
+            padding-bottom: 120px;
+        }
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 24px;
+    }
+    &__inner{
+        grid-column: 3/11;
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    &__content{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;
+
+        p{
+            margin-bottom: 32px;
+        }
+
+    }
+    &__title{
+        padding-left: 14px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: capitalize;
+        color: $neutral-100;
+    }
+    &__subtitle{
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        text-transform: capitalize;
+        color: $neutral-100
+    }
+    &__list{
+        // margin-bottom: 40px;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px 24px;
+    }
+    &__item{
+        padding-left: 42px;
+        min-height: 60px;
+        position: relative;
+        list-style: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #404040;
+    }
+
+    &__item-icon{
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 26px;
+        height: 26px;
+    }
+
+    @media only screen and (max-width:1440px) {
+        @include imageRatio(34,34,true,contain,'icon');
+        &__inner{
+            grid-column: 2/12;
+        }
+        &__title{
+            font-size: 28px;
+            line-height: 40px;
+        }
+        &__content{
+            font-size: 16px;
+            line-height: 28px;
+            p{
+                margin-bottom: 24px;
+            }
+    
+        }
+        &__subtitle {
+            margin-top: 32px;
+            margin-bottom: 18px;
+            font-size: 28px;
+            line-height: 40px;
+        }
+
+        &__item {
+            padding-left: 37px;
+            min-height: 37px;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        @include imageRatio(37,37,true,contain,'icon');
+        &__inner{
+            grid-column: 1/13;
+        }
+        &__item{
+            min-height: 50px;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        &__title{
+            font-size: 32px;
+            line-height: 42px;
+        }
+        &__subtitle{
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &__content{
+            font-size: 16px;
+            line-height: 24px;
+            p{
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        &__item{
+            min-height: 50px;
+            font-size: 16px;
+            line-height: 24px;
+        }    
+    }
+}
